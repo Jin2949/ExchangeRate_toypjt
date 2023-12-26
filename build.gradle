@@ -32,6 +32,7 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
+// 아마존 rds db연결시  ++ 마스터이름 : admin  ++ 암호 : gud1wls2
 
 tasks.named('test') {
 	useJUnitPlatform()
