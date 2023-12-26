@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <form role="form" action="/rate" th:object="${RateForm}" method="post">
+    <div>
+      <label th:for="email">이메일</label>
+      <input type="email" th:field="*{email}" placeholder="이메일을 입력하세요">
+    </div>
+    <div>
+      <label th:for="price">가격</label>
+      <input type="number" step="0.01" th:field="*{price}" placeholder="원하는 가격을 입력하세요">
+      <span>현재가격 : </span>
+      <span th:text="${NowPrice}"></span>
+    </div>
+    <div>
+      <label th:for="price">상단가</label>
+      <input type="number" step="0.01" th:field="*{plus}" placeholder="원하는 상승% 알람을 입력하세요">
+    </div>
+    <div>
+      <label th:for="price">하단가</label>
+      <input type="number" step="0.01" th:field="*{minus}" placeholder="원하는 하락% 알람을 입력하세요">
+    </div>
+    <button type="submit">신청하기</button>
+  </form>
+</body>
+</html>
